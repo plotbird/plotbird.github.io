@@ -746,3 +746,58 @@ td strong {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+/* Mobile -------------------------------------------------------------------
+   Grid items refuse to shrink below their content unless told otherwise, and a
+   long unbreakable line in the code sample was enough to push the whole page
+   wider than the screen. */
+
+.steps > *,
+.cards > *,
+.numbers-inner > * {
+    min-width: 0;
+}
+
+@media (max-width: 559px) {
+    /* Let the snippet wrap instead of scrolling on the narrowest screens. */
+    pre {
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+    }
+}
+
+@media (max-width: 639px) {
+    /* Counters as a list: a value and its label per row, hairlines between. */
+    .numbers-inner {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 10px 0;
+    }
+
+    .numbers-inner .stat {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 13px 0;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .numbers-inner .stat:last-child {
+        border-bottom: 0;
+    }
+
+    .numbers-inner .stat span {
+        order: 1;
+        margin: 0;
+        font-size: 13.5px;
+        letter-spacing: 0;
+        text-transform: none;
+    }
+
+    .numbers-inner .stat b {
+        order: 2;
+        font-size: 1.15rem;
+        white-space: nowrap;
+    }
+}
