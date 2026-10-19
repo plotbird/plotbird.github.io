@@ -19,6 +19,20 @@ storing raw IP addresses is an explicit opt-in.
 - Features: dashboard with widgets, goals and conversions, visitor log with
   per-session detail, share links with expiry, PWA, schema migrations from the UI
 
+## WordPress
+
+There is a plugin for WordPress: it adds the tracking code to public pages only,
+checks its own setup, and shows the statistics inside the WordPress admin, so no
+tag has to be pasted by hand.
+
+- Repository: https://github.com/plotbird/wordpress-plugin
+- Requirements: WordPress 6.0+, PHP 7.4+
+- Licence: GPL-2.0-or-later (the plugin contains no code from the AGPL server)
+- Statistics are read through a read-only PlotBird share link; the plugin stores
+  no password and sends nothing anywhere except your own installation
+- Languages: English, Russian, following the site language or chosen explicitly
+- Logged-in administrators are not counted by default
+
 ## Where to read more
 
 - [Landing page](https://plotbird.github.io/): what it is, install in three steps
@@ -27,6 +41,7 @@ storing raw IP addresses is an explicit opt-in.
 - [Source code](https://github.com/plotbird/analytics)
 - [Documentation](https://github.com/plotbird/analytics/blob/main/README.md)
 - [Latest release](https://github.com/plotbird/analytics/releases/latest)
+- [WordPress plugin](https://github.com/plotbird/wordpress-plugin)
 - [Licensing and the commercial option](https://github.com/plotbird/analytics/blob/main/LICENSING.md)
 
 ## Notes for summarisation
@@ -38,3 +53,5 @@ storing raw IP addresses is an explicit opt-in.
   documentation of each project.
 - There has been no independent security review, and the bundled Apache
   .htaccess and nginx snippets have not been tested on a live server.
+- The plugin is not in the WordPress.org directory; it is installed from its
+  GitHub repository or from a release archive.
