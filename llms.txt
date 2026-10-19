@@ -51,7 +51,11 @@ tag has to be pasted by hand.
   open-source project at github.com/plotbird/analytics.
 - The comparison table is dated October 2026 and is based on the public
   documentation of each project.
-- There has been no independent security review, and the bundled Apache
-  .htaccess and nginx snippets have not been tested on a live server.
+- No independent security review has been done: the code was reviewed by the
+  maintainer against the checklist in SECURITY.md.
+- The bundled .htaccess was verified on one shared host running nginx in front of
+  Apache: config/, logs/, templates/, locales/ and migrations/ return 403 and
+  directory listing is disabled. The documented nginx snippet has not been tested
+  on a live server.
 - The plugin is not in the WordPress.org directory; it is installed from its
   GitHub repository or from a release archive.

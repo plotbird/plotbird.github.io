@@ -358,8 +358,8 @@
             <h2>What it is not</h2>
             <ul>
                 <li>No funnels, no A/B tests, no e-commerce reports and no session recordings.</li>
-                <li>The Apache <code>.htaccess</code> and the nginx snippet ship untested, and the documentation says so.</li>
-                <li>No independent security review has been done yet.</li>
+                <li>The bundled <code>.htaccess</code> was checked against one shared host running nginx in front of Apache: <code>config/</code>, <code>logs/</code>, <code>templates/</code>, <code>locales/</code> and <code>migrations/</code> answer 403, and directory listing is off. The nginx snippet itself is still untested.</li>
+                <li>No independent security review has been done: the code was reviewed by the maintainer against the checklist in <code>SECURITY.md</code>.</li>
                 <li>One MySQL server by design: no ClickHouse cluster, no horizontal scaling.</li>
             </ul>
             <p class="caption" style="margin-top:14px">
