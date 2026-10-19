@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PlotBird, Matomo, Plausible, Umami и GoatCounter: какая аналитика встанет на ваш хостинг</title>
+<meta name="description" content="Фактическое сравнение аналитики для своего сервера по тому, что каждому инструменту нужно для работы: PlotBird, Matomo, Plausible, Umami и GoatCounter. Включая случаи, когда лучше выбрать другой.">
+<link rel="canonical" href="https://plotbird.github.io/ru/vs/">
+<link rel="alternate" hreflang="en" href="https://plotbird.github.io/vs/">
+<link rel="alternate" hreflang="ru" href="https://plotbird.github.io/ru/vs/">
+<link rel="alternate" hreflang="x-default" href="https://plotbird.github.io/vs/">
+<link rel="icon" type="image/svg+xml" href="../../assets/logo.svg">
+<link rel="stylesheet" href="../../assets/style.css">
+<meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#080c14" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Какая аналитика встанет на ваш хостинг?">
+<meta property="og:description" content="PlotBird, Matomo, Plausible, Umami и GoatCounter — сравнение по требованиям к хостингу.">
+<meta property="og:url" content="https://plotbird.github.io/ru/vs/">
+<meta property="og:image" content="https://plotbird.github.io/assets/og-ru.png">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_US">
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Какая аналитика встанет на ваш хостинг?",
+    "description": "PlotBird, Matomo, Plausible, Umami и GoatCounter — сравнение по требованиям к хостингу.",
+    "url": "https://plotbird.github.io/ru/vs/",
+    "inLanguage": "ru",
+    "dateModified": "2026-10-19",
+    "isPartOf": {
+        "@type": "WebSite",
+        "name": "PlotBird",
+        "url": "https://plotbird.github.io/"
+    },
+    "about": [
+        {
+            "@type": "SoftwareApplication",
+            "name": "PlotBird Analytics"
+        },
+        {
+            "@type": "SoftwareApplication",
+            "name": "Matomo"
+        },
+        {
+            "@type": "SoftwareApplication",
+            "name": "Plausible Analytics"
+        },
+        {
+            "@type": "SoftwareApplication",
+            "name": "Umami"
+        },
+        {
+            "@type": "SoftwareApplication",
+            "name": "GoatCounter"
+        }
+    ],
+    "license": "https://www.gnu.org/licenses/agpl-3.0.html"
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+    <div class="wrap nav-inner">
+        <a class="brand" href="../../index.html">
+            <img src="../../assets/logo.svg" alt="" width="28" height="28">
+            PlotBird
+        </a>
+        <nav class="nav-links">
+            <a href="../../index.html#why">Зачем</a>
+            <a href="../../index.html#install">Установка</a>
+            <a href="index.html">Сравнение</a>
+        </nav>
+        <div class="nav-right">
+            <div class="lang">
+                <a href="../../vs/index.html" hreflang="en">EN</a>
+                <span>RU</span>
+            </div>
+            <a class="btn btn-ghost btn-nav" href="https://github.com/plotbird/analytics">GitHub</a>
+        </div>
+    </div>
+</header>
+
+<main>
+
+<div class="wrap hero">
+    <h1>Какая аналитика встанет на ваш хостинг?</h1>
+    <p class="lead">
+        Вопрос редко звучит как «какая лучше». Обычно он звучит как «что я вообще смогу
+        запустить». Здесь сравниваются требования инструментов — и прямо сказано, когда
+        лучше выбрать другой.
+    </p>
+    <p class="hero-note">Факты взяты из открытой документации проектов, октябрь 2026</p>
+</div>
+
+<section>
+    <div class="wrap">
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">&nbsp;</th>
+                        <th scope="col">PlotBird</th>
+                        <th scope="col">Matomo</th>
+                        <th scope="col">Plausible</th>
+                        <th scope="col">Umami</th>
+                        <th scope="col">GoatCounter</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Что нужно</th>
+                        <td><strong>PHP + MySQL</strong></td>
+                        <td>PHP + MySQL</td>
+                        <td>Elixir + ClickHouse</td>
+                        <td>Node + PostgreSQL/MySQL</td>
+                        <td>бинарник Go</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Работает на виртуальном хостинге без SSH</th>
+                        <td><strong>да</strong></td>
+                        <td>да</td>
+                        <td>нет</td>
+                        <td>нет</td>
+                        <td>редко</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Установка в браузере</th>
+                        <td><strong>да</strong></td>
+                        <td>да</td>
+                        <td>нет</td>
+                        <td>нет</td>
+                        <td>нет</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Cookie по умолчанию</th>
+                        <td><strong>нет</strong></td>
+                        <td>да</td>
+                        <td>нет</td>
+                        <td>нет</td>
+                        <td>нет</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Страна из локальной базы IP</th>
+                        <td><strong>в комплекте</strong></td>
+                        <td>плагин</td>
+                        <td>в комплекте (MaxMind)</td>
+                        <td>в комплекте</td>
+                        <td>нет</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Обновление схемы без терминала</th>
+                        <td><strong>да, из интерфейса</strong></td>
+                        <td>да</td>
+                        <td>нет</td>
+                        <td>нет</td>
+                        <td>нет</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Размер счётчика</th>
+                        <td><strong>1,3 КБ</strong></td>
+                        <td>~20 КБ</td>
+                        <td>~1 КБ</td>
+                        <td>~2 КБ</td>
+                        <td>~3 КБ</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Глубина возможностей</th>
+                        <td>небольшая</td>
+                        <td>огромная</td>
+                        <td>средняя</td>
+                        <td>большая</td>
+                        <td>небольшая</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Лицензия</th>
+                        <td>AGPL-3.0</td>
+                        <td>GPL-3.0</td>
+                        <td>AGPL-3.0</td>
+                        <td>MIT</td>
+                        <td>своя</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="note" style="margin-top:14px">
+            Размеры счётчиков — те, что каждый проект указывает для своего скрипта. «Работает на
+            виртуальном хостинге» значит: нужен PHP или бинарник, который хостинг уже даёт, а не
+            контейнерная платформа.
+        </p>
+    </div>
+</section>
+
+<section>
+    <div class="wrap">
+        <div class="section-head">
+            <h2>Выбирайте по тому, что у вас есть, а не по тому, что звучит лучше</h2>
+            <p>Пять честных выводов, включая те, что не в пользу PlotBird.</p>
+        </div>
+
+        <div class="cards cards-2">
+            <article class="verdict">
+                <h3>Выбирайте PlotBird, если…</h3>
+                <p>
+                    У вас обычный хостинг с PHP и MySQL, без SSH и без возможности запускать Docker.
+                    Вы хотите, чтобы страны работали с первого дня без скачивания базы, и вам
+                    нужен небольшой инструмент, который ставится за пять минут, а не платформа,
+                    которую настраивают неделю.
+                </p>
+            </article>
+
+            <article class="verdict">
+                <h3>Выбирайте Matomo, если…</h3>
+                <p>
+                    Нужны воронки, электронная коммерция, отчёты по кампаниям или плагины. Matomo
+                    тоже работает на PHP и MySQL, поэтому аргумент про хостинг вас не разделяет:
+                    разница в весе и охвате.
+                </p>
+                <p>
+                    Cookie он ставит по умолчанию, так что планируйте баннер согласия.
+                    <a href="https://matomo.org/">matomo.org</a>
+                </p>
+            </article>
+
+            <article class="verdict">
+                <h3>Выбирайте Plausible, если…</h3>
+                <p>
+                    У вас есть VPS с Docker и хочется зрелый, отполированный продукт с командой за
+                    спиной. Plausible нужны Elixir и ClickHouse — это другой класс сервера, не
+                    виртуальный хостинг.
+                </p>
+                <p><a href="https://plausible.io/">plausible.io</a></p>
+            </article>
+
+            <article class="verdict">
+                <h3>Выбирайте Umami, если…</h3>
+                <p>
+                    Вы уже работаете с Node или ваш хостинг его даёт. Umami под MIT и по набору
+                    возможностей шире PlotBird. Если ваш хостинг на Node — вполне разумная точка
+                    старта.
+                </p>
+                <p><a href="https://umami.is/">umami.is</a></p>
+            </article>
+
+            <article class="verdict">
+                <h3>Выбирайте GoatCounter, если…</h3>
+                <p>
+                    Нужен один бинарник и минимальный след, а отчёты по странам не важны. Это самый
+                    лёгкий вариант в списке, и это заметно.
+                </p>
+                <p><a href="https://www.goatcounter.com/">goatcounter.com</a></p>
+            </article>
+
+            <article class="verdict">
+                <h3>Не выбирайте ничего из этого, если…</h3>
+                <p>
+                    Нужны записи сессий, тепловые карты или A/B-тесты. Это другие продукты, и весь
+                    этот список — не та категория.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="wrap">
+        <div class="not">
+            <h2>Чего эта страница не утверждает</h2>
+            <ul>
+                <li>Замеров скорости и потребления ресурсов не проводилось. Числа выше — требования и размеры поставки, а не измерения.</li>
+                <li>Аудита возможностей чужих проектов не было: источник — их документация.</li>
+                <li>Возможности меняются. У каждой таблицы есть дата в начале страницы; если что-то неверно, <a href="https://github.com/plotbird/analytics/issues">откройте issue</a> — исправим.</li>
+            </ul>
+            <p class="note" style="margin-top:14px">
+                PlotBird, Plausible, Umami, Matomo и GoatCounter — товарные знаки своих
+                владельцев. Названия использованы описательно, для сравнения программ, без какой
+                либо аффилированности, партнёрства или одобрения с их стороны.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="wrap">
+        <div class="cards cards-2">
+            <article class="card">
+                <h3>PlotBird нужны PHP и MySQL</h3>
+                <p>
+                    В этом весь смысл. Загрузите архив, пройдите мастер в браузере, вставьте один
+                    тег. 1,3 КБ, без cookie, данные о странах внутри.
+                </p>
+            </article>
+            <article class="card">
+                <h3>Начните с исходников</h3>
+                <p>
+                    AGPL-3.0-or-later, без телеметрии и без чужих аккаунтов.
+                    <a href="https://github.com/plotbird/analytics">github.com/plotbird/analytics</a>
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="wrap footer-inner">
+        <span>© <span id="year">2026</span> PlotBird · AGPL-3.0-or-later</span>
+        <div class="footer-links">
+            <a href="https://github.com/plotbird/analytics">Исходный код</a>
+            <a href="../../index.html">Главная</a>
+            <a href="../../vs/index.html" hreflang="en">English version</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

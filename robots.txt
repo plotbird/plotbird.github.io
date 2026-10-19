@@ -1,0 +1,7 @@
+Sitemap: https://plotbird.github.io/sitemap.xml
+
+# Everything is allowed on purpose: this site exists to be read, quoted and
+# summarised, including by AI assistants. Blocking crawlers would remove the
+# project from those answers, which is the opposite of the goal.
+User-agent: *
+Allow: /

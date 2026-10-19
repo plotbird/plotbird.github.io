@@ -654,3 +654,95 @@ footer {
         transition: none !important;
     }
 }
+
+/* Comparison table -------------------------------------------------------- */
+
+.table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
+    width: 100%;
+    min-width: 760px;
+    border-collapse: collapse;
+    font-size: 14.5px;
+    line-height: 1.5;
+}
+
+th,
+td {
+    padding: 12px 16px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border);
+}
+
+thead th {
+    color: var(--faint);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+tbody th {
+    color: var(--muted);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+td strong {
+    font-weight: 650;
+}
+
+/* Verdict blocks ---------------------------------------------------------- */
+
+.verdict {
+    padding: 24px 26px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+}
+
+.verdict h3 {
+    margin: 0 0 10px;
+    font-size: 1.05rem;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+}
+
+.verdict p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 15.5px;
+}
+
+.verdict p + p {
+    margin-top: 10px;
+}
+
+.verdict a {
+    font-weight: 600;
+}
+
+.note {
+    margin: 0;
+    color: var(--faint);
+    font-size: 13.5px;
+    line-height: 1.6;
+}
+
+@media (min-width: 720px) {
+    .cards-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

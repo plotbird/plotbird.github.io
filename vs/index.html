@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PlotBird vs Plausible, Umami and Matomo: which self-hosted analytics fits your hosting</title>
+<meta name="description" content="A factual comparison of self-hosted analytics by what each one needs to run: PlotBird, Matomo, Plausible, Umami and GoatCounter. Including when another tool is the better choice.">
+<link rel="canonical" href="https://plotbird.github.io/vs/">
+<link rel="alternate" hreflang="en" href="https://plotbird.github.io/vs/">
+<link rel="alternate" hreflang="ru" href="https://plotbird.github.io/ru/vs/">
+<link rel="alternate" hreflang="x-default" href="https://plotbird.github.io/vs/">
+<link rel="icon" type="image/svg+xml" href="../assets/logo.svg">
+<link rel="stylesheet" href="../assets/style.css">
+<meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#080c14" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Which self-hosted analytics fits your hosting?">
+<meta property="og:description" content="PlotBird, Matomo, Plausible, Umami and GoatCounter compared by what each one needs to run.">
+<meta property="og:url" content="https://plotbird.github.io/vs/">
+<meta property="og:image" content="https://plotbird.github.io/assets/og.png">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ru_RU">
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Which self-hosted analytics fits your hosting?",
+    "description": "PlotBird, Matomo, Plausible, Umami and GoatCounter compared by what each one needs to run.",
+    "url": "https://plotbird.github.io/vs/",
+    "inLanguage": "en",
+    "dateModified": "2026-10-19",
+    "isPartOf": {
+        "@type": "WebSite",
+        "name": "PlotBird",
+        "url": "https://plotbird.github.io/"
+    },
+    "about": [
+        {
+            "@type": "SoftwareApplication",
+            "name": "PlotBird Analytics"
+        },
+        {
+            "@type": "SoftwareApplication",
+            "name": "Matomo"
+        },
+        {
+            "@type": "SoftwareApplication",
+            "name": "Plausible Analytics"
+        },
+        {
+            "@type": "SoftwareApplication",
+            "name": "Umami"
+        },
+        {
+            "@type": "SoftwareApplication",
+            "name": "GoatCounter"
+        }
+    ],
+    "license": "https://www.gnu.org/licenses/agpl-3.0.html"
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+    <div class="wrap nav-inner">
+        <a class="brand" href="../index.html">
+            <img src="../assets/logo.svg" alt="" width="28" height="28">
+            PlotBird
+        </a>
+        <nav class="nav-links">
+            <a href="../index.html#why">Why</a>
+            <a href="../index.html#install">Install</a>
+            <a href="index.html">Compare</a>
+        </nav>
+        <div class="nav-right">
+            <div class="lang">
+                <span>EN</span>
+                <a href="../ru/vs/index.html" hreflang="ru">RU</a>
+            </div>
+            <a class="btn btn-ghost btn-nav" href="https://github.com/plotbird/analytics">GitHub</a>
+        </div>
+    </div>
+</header>
+
+<main>
+
+<div class="wrap hero">
+    <h1>Which self-hosted analytics fits your hosting?</h1>
+    <p class="lead">
+        The question is rarely “which one is best”. It is “what can I actually run”. This page
+        compares what each tool needs, and says plainly when another one is the better choice.
+    </p>
+    <p class="hero-note">Facts taken from the public documentation of each project, October 2026</p>
+</div>
+
+<section>
+    <div class="wrap">
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">&nbsp;</th>
+                        <th scope="col">PlotBird</th>
+                        <th scope="col">Matomo</th>
+                        <th scope="col">Plausible</th>
+                        <th scope="col">Umami</th>
+                        <th scope="col">GoatCounter</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Needs</th>
+                        <td><strong>PHP + MySQL</strong></td>
+                        <td>PHP + MySQL</td>
+                        <td>Elixir + ClickHouse</td>
+                        <td>Node + PostgreSQL/MySQL</td>
+                        <td>Go binary</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Runs on shared hosting without SSH</th>
+                        <td><strong>yes</strong></td>
+                        <td>yes</td>
+                        <td>no</td>
+                        <td>no</td>
+                        <td>rarely</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Installer in the browser</th>
+                        <td><strong>yes</strong></td>
+                        <td>yes</td>
+                        <td>no</td>
+                        <td>no</td>
+                        <td>no</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Cookies by default</th>
+                        <td><strong>no</strong></td>
+                        <td>yes</td>
+                        <td>no</td>
+                        <td>no</td>
+                        <td>no</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Country from a local IP database</th>
+                        <td><strong>bundled</strong></td>
+                        <td>plugin</td>
+                        <td>bundled (MaxMind)</td>
+                        <td>bundled</td>
+                        <td>no</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Schema upgrades without a shell</th>
+                        <td><strong>yes, from the UI</strong></td>
+                        <td>yes</td>
+                        <td>no</td>
+                        <td>no</td>
+                        <td>no</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Tracker size</th>
+                        <td><strong>1.3 KB</strong></td>
+                        <td>~20 KB</td>
+                        <td>~1 KB</td>
+                        <td>~2 KB</td>
+                        <td>~3 KB</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Feature depth</th>
+                        <td>small</td>
+                        <td>huge</td>
+                        <td>medium</td>
+                        <td>large</td>
+                        <td>small</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Licence</th>
+                        <td>AGPL-3.0</td>
+                        <td>GPL-3.0</td>
+                        <td>AGPL-3.0</td>
+                        <td>MIT</td>
+                        <td>own</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="note" style="margin-top:14px">
+            Tracker sizes are the ones each project states for its own script. “Runs on shared
+            hosting” means PHP or a binary the host already provides — not a container platform.
+        </p>
+    </div>
+</section>
+
+<section>
+    <div class="wrap">
+        <div class="section-head">
+            <h2>Choose by what you have, not by what sounds best</h2>
+            <p>Five honest verdicts, including the ones that do not favour PlotBird.</p>
+        </div>
+
+        <div class="cards cards-2">
+            <article class="verdict">
+                <h3>Choose PlotBird when…</h3>
+                <p>
+                    You have ordinary hosting with PHP and MySQL, no SSH, and no way to run Docker.
+                    You want the country data to work on the first day without downloading a
+                    database, and you would rather have a small tool that installs in five minutes
+                    than a platform you configure for a week.
+                </p>
+            </article>
+
+            <article class="verdict">
+                <h3>Choose Matomo when…</h3>
+                <p>
+                    You need funnels, e-commerce tracking, campaign reports or a plugin ecosystem.
+                    Matomo also runs on PHP and MySQL, so the hosting argument does not separate
+                    the two: the difference is weight and scope.
+                </p>
+                <p>
+                    It sets cookies by default, so plan for a consent banner.
+                    <a href="https://matomo.org/">matomo.org</a>
+                </p>
+            </article>
+
+            <article class="verdict">
+                <h3>Choose Plausible when…</h3>
+                <p>
+                    You have a VPS with Docker and want a mature, polished product with a team
+                    behind it. Plausible needs Elixir and ClickHouse, which is a different class of
+                    server than shared hosting.
+                </p>
+                <p><a href="https://plausible.io/">plausible.io</a></p>
+            </article>
+
+            <article class="verdict">
+                <h3>Choose Umami when…</h3>
+                <p>
+                    You already run Node, or your host offers it. Umami is MIT-licensed and has a
+                    broader feature set than PlotBird. If your hosting is Node-based, it is a
+                    perfectly reasonable starting point.
+                </p>
+                <p><a href="https://umami.is/">umami.is</a></p>
+            </article>
+
+            <article class="verdict">
+                <h3>Choose GoatCounter when…</h3>
+                <p>
+                    You want a single binary and the smallest possible footprint, and you do not
+                    need country reports. It is the leanest option in this list, and it shows.
+                </p>
+                <p><a href="https://www.goatcounter.com/">goatcounter.com</a></p>
+            </article>
+
+            <article class="verdict">
+                <h3>Do not choose any of them when…</h3>
+                <p>
+                    You need session recordings, heatmaps or A/B testing. Those are different
+                    products, and this whole list is the wrong category for them.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="wrap">
+        <div class="not">
+            <h2>What this page does not claim</h2>
+            <ul>
+                <li>No benchmarks of speed or resource use were run. The numbers above are requirements and shipped sizes, not measurements.</li>
+                <li>No feature audit was performed on the other projects: their documentation is the source.</li>
+                <li>Features change. Every row has a date at the top of the page; if something is wrong, <a href="https://github.com/plotbird/analytics/issues">open an issue</a> and it gets fixed.</li>
+            </ul>
+            <p class="note" style="margin-top:14px">
+                PlotBird, Plausible, Umami, Matomo and GoatCounter are the trademarks of their
+                respective owners. The names are used descriptively to compare software, without
+                any affiliation, endorsement or partnership.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="wrap">
+        <div class="cards cards-2">
+            <article class="card">
+                <h3>PlotBird needs PHP and MySQL</h3>
+                <p>
+                    That is the whole point. Upload the archive, finish the wizard in the browser,
+                    paste one script tag. 1.3 KB, no cookies, country data included.
+                </p>
+            </article>
+            <article class="card">
+                <h3>Start with the source</h3>
+                <p>
+                    AGPL-3.0-or-later, no telemetry, no accounts anywhere.
+                    <a href="https://github.com/plotbird/analytics">github.com/plotbird/analytics</a>
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="wrap footer-inner">
+        <span>© <span id="year">2026</span> PlotBird · AGPL-3.0-or-later</span>
+        <div class="footer-links">
+            <a href="https://github.com/plotbird/analytics">Source code</a>
+            <a href="../index.html">Home</a>
+            <a href="../ru/vs/index.html" hreflang="ru">Русская версия</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
